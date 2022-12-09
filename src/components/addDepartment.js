@@ -34,15 +34,26 @@ const AddDepartment = () => {
     }
 
     //Calling save method from DepartmentService to save data
+
     const saveDepartment = (e)=>{
         e.preventDefault();
+        
+        //Checking If object is empty or not
+        // if(Object.keys(department).length > 0){
+            
+        // }
+
         DepartmentService.saveDepartment(department).then((response)=>{
             navigate("/departmentList")
             //console.log(response)
         }).catch((error)=>{
             console.log(error)
         })
+
+        
     }
+
+    
 
   return (
     <div className="flex max-w-2xl shadow border-b bg-gray-200 rounded mt-2 mx-auto">
