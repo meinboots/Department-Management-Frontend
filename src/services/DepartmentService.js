@@ -6,6 +6,10 @@ class DepartmentService {
         saveDepartment(department){
             return axios.post(DEPARTMENT_API_BASE_URL, department);
         }
+
+        getDepartments(){
+            return axios.get(DEPARTMENT_API_BASE_URL);
+        }
 }
 
 export default new DepartmentService();

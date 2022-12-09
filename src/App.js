@@ -13,7 +13,7 @@ function App() {
       <Route index element={<DepartmentList />}/>
       <Route path="/" element={<DepartmentList />}/>
       <Route path="departmentList" element={<DepartmentList />}/>
-      <Route path="AddDepartment" element={<AddDepartment />}/>
+      <Route path="addDepartment" element={<AddDepartment />}/>
     </Routes>
 
     </BrowserRouter>
