@@ -27,7 +27,7 @@ const DepartmentList = () => {
 
   return (
     <section className="text-gray-600 body-font">
-  <div className="container px-5 py-24 mx-auto">
+  <div className="container px-5 py-6 mx-auto">
     <div className="flex flex-col text-center w-full mb-6">
       <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Department List</h1>
     </div>
@@ -66,7 +66,7 @@ const DepartmentList = () => {
       </table>
     </div>
     <div className="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
-      <button onClick={()=>navigate("/addDepartment")} className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Add Department</button>
+      <button onClick={()=>navigate("/addDepartment")} className="flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Add Department</button>
     </div>
   </div>
 </section>
