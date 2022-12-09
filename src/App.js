@@ -1,12 +1,24 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
-import AddDepartment from "./components/addDepartment";
+import DepartmentList from "./components/DepartmentList";
+import AddDepartment from "./components/AddDepartment";
 
 function App() {
   return (
+  
     <>
+    <BrowserRouter>
     <NavBar />
-    <AddDepartment />  
+    <Routes>
+      <Route index element={<DepartmentList />}/>
+      <Route path="/" element={<DepartmentList />}/>
+      <Route path="departmentList" element={<DepartmentList />}/>
+      <Route path="AddDepartment" element={<AddDepartment />}/>
+    </Routes>
+
+    </BrowserRouter>
     </>
+    
   );
 }
 
