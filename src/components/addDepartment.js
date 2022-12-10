@@ -39,21 +39,20 @@ const AddDepartment = () => {
         e.preventDefault();
         
         //Checking If object is empty or not
-        // if(Object.keys(department).length > 0){
+
+        if(department.departmentAddress && department.departmentCode && department.departmentName){
             
-        // }
-
         DepartmentService.saveDepartment(department).then((response)=>{
-            navigate("/departmentList")
-            //console.log(response)
-        }).catch((error)=>{
-            console.log(error)
-        })
+                navigate("/departmentList")
+                //console.log(response)
+            }).catch((error)=>{
+                console.log(error)
+            })
 
-        
+        } else{
+            return;
+        }
     }
-
-    
 
   return (
     <div className="flex max-w-2xl shadow border-b bg-gray-200 rounded mt-2 mx-auto">
@@ -91,7 +90,7 @@ const AddDepartment = () => {
                     </div>
                     <div className="items-center justify-center h-4 w-full my-6 space-x-4">
                             <button onClick={saveDepartment} className="text-white bg-green-500 rounded py-1 px-4 hover:bg-green-700 font-semi-bold">Save</button>
-                            <button onClick={clearFields} className="text-white bg-red-500 rounded py-1 px-4 hover:bg-red-700 font-semi-bold">Clear</button>
+                            <button onClick={clearFields} className="text-white bg-red-500 ml-2 rounded py-1 px-4 hover:bg-red-700 font-semi-bold">Clear</button>
                     </div>
             </div>
         </div>
