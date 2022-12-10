@@ -10,6 +10,12 @@ class DepartmentService {
         getDepartments(){
             return axios.get(DEPARTMENT_API_BASE_URL);
         }
+
+        deleteDepartments(id){
+            return axios.delete(DEPARTMENT_API_BASE_URL+ "/" + id);
+        }
+
+
 }
 
 export default new DepartmentService();
