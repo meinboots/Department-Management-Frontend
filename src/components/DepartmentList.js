@@ -34,7 +34,13 @@ const DepartmentList = () => {
           })
         }
       }))
-    }  
+    }
+    
+    //Redirecting to update page and sending Id of clicked element
+    const editDepartment = (e, id) => {
+      e.preventDefault();
+      navigate (`/updateDepartment/${id}`);
+    }
 
   return (
     <section className="text-gray-600 body-font">
@@ -63,7 +69,7 @@ const DepartmentList = () => {
             <td className="px-4 py-3">{department.departmentAddress}</td>
             <td className="px-4 py-3">
               <div className="px-2 text-lg bg-gray-400 rounded text-gray-900 text-center">
-              <a href= "#" className="text-sm text-white font-bold hover:text-blue-500">Edit</a>
+              <a onClick={(e, id) =>editDepartment(e, department.departmentId)} className="text-sm text-white font-bold hover:text-blue-500 hover:cursor-pointer">Edit</a>
               <a onClick={(e, id) =>deleteDepartment(e, department.departmentId)} className="text-sm text-white pl-2 font-bold hover:text-red-500 hover:cursor-pointer">Delete</a>
               </div>
             </td>

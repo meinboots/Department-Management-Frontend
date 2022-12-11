@@ -15,6 +15,14 @@ class DepartmentService {
             return axios.delete(DEPARTMENT_API_BASE_URL+ "/" + id);
         }
 
+        getDepartmentById(id){
+            return axios.get(DEPARTMENT_API_BASE_URL+ "/" + id);
+        }
+
+        updateDepartment(department, id){
+            return axios.put(DEPARTMENT_API_BASE_URL+ "/" + id, department);
+        }
+
 
 }
 
